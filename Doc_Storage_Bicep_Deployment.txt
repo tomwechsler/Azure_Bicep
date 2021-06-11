@@ -1,0 +1,15 @@
+https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/install
+
+resource storage 'Microsoft.Storage/storageAccounts@2021-02-01' = {
+  name: 'twsta4625'
+  sku: {
+    name: 'Standard_LRS'
+  }
+   kind: 'StorageV2'
+   location: 'WestEurope'
+  }
+
+
+New-AzResourceGroup -Name twbiceprg -Location WestEurope
+
+New-AzResourceGroupDeployment -Name Bicep -ResourceGroupName twbiceprg -TemplateFile 
