@@ -1,8 +1,9 @@
 @description('Specifies the location for resources.')
 param location string = 'WestEurope'
+param storagename string = 'twsta4625'
 
 resource storage 'Microsoft.Storage/storageAccounts@2021-04-01' = {
-  name: 'twsta4625'
+  name: storagename
   sku: {
     name: 'Standard_LRS'
   }
